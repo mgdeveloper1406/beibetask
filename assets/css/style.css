@@ -6,7 +6,9 @@ style.css
 
 body {
     background-image: url("../images/bg1.jpg");
-    font-family: 'Shadows Into Light', cursive;
+    /* font-family: 'Shadows Into Light', cursive; */
+    font-family: 'Kaushan Script', cursive;
+
 }
 
 .bg-babyblue {
