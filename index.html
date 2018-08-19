@@ -1,0 +1,107 @@
+<!-- 
+Andrew Ton
+Assignment 7 - Route Scheduler
+index.html 
+-->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap, reset, style, Google Fonts, Hover CSS -->
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <title>Route Schedules</title>
+  </head>
+
+  <body class="text-center bg-dark text-dark container-fluid">
+    
+     <!-- Jumbotron -->
+     <div class="jumbotron-fluid bg-secondary rounded">
+			 <div id="title">
+					<img src="assets/images/logo1.png" alt="Scorpion Shipyard" class="m-3" width="80%">
+					<img src="assets/images/logo2.png" alt="Departure Schedule" width="60%">
+			 </div>
+			<hr class="my-4">
+			<p>Simple Route schedule application.</p>
+			<p>Input docking information to see next available departure.</p>
+			<h1 id="timeText" class="display-4">Time:</h1>
+
+    </div>
+    <br>
+
+    <!-- Current Route schedule table -->
+    <div class="card">
+      <h5 class="card-header bg-secondary rounded text-left text-dark font-weight-bold">
+        Current Route Schedules
+      </h5>
+      <div class="card-body border border-secondary">
+        <table class="table table-hover table-secondary text-dark table-bordered">
+          <thead class="font-weight-bold">
+            <tr>
+              <th scope="col">Route Name:</th>
+              <th scope="col">Destination:</th>
+              <th scope="col">Frequency (min)</th>
+              <th scope="col">Next Arrival</th>
+              <th scope="col">Minutes Away</th>
+            </tr>
+          </thead>
+          <tbody id="routeText">
+            <!-- <tr> // test row
+              <th scope="row">1</th>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>@mdo</td>
+            </tr> -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <br>
+
+    <!-- Add Route form -->
+        <div class="card">
+          <h5 class="card-header bg-secondary rounded text-left text-dark font-weight-bold">
+            Add Route
+          </h5>
+          <div class="card-body border border-secondary">
+
+            <form id="addForm" class="text-left"> <!-- Start Form -->
+                <div class="form-group">
+                  <label for="nameInput">Route Name</label>
+                  <input type="text" class="form-control" id="nameInput" placeholder="Galactica">
+                </div>
+              <div class="form-group">
+                <label for="destinationInput">Destination</label>
+                <input type="text" class="form-control" id="destinationInput" placeholder="Caprica">
+              </div>
+              <div class="form-group">
+                <label for="timeInput">Start Time</label>
+                <input type="number" class="form-control" id="timeInput" placeholder="HHmm">
+              </div>
+              <div class="form-group">
+                  <label for="frequencyInput">Frequency (min)</label>
+                  <input type="number" class="form-control" id="frequencyInput" placeholder="10">
+                </div>
+              <button type="submit" id="submitButton" class="btn btn-secondary border border-secondary">Submit</button>
+            </form> <!-- End Form-->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- FireBase first, then jQuery, then Popper.js, then Bootstrap JS, then moment.js -->
+    <script src="https://www.gstatic.com/firebasejs/5.4.0/firebase.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+    <script src="assets/javascript/app.js"></script>
+    </body>
+</html>
