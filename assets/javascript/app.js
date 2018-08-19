@@ -20,7 +20,7 @@ $(document).ready(function() {
 
 	// display placeholder times
 	$("#timeText").text(moment().format("HHmm"));
-	$("#dateInput").attr("placeholder", new Date().toLocaleDateString());
+	$("#dateInput").attr("placeholder", moment().format("MM/DD"));
 	$("#timeInput").attr("placeholder", moment().format("HHmm"));
 
 
@@ -33,7 +33,7 @@ $(document).ready(function() {
 
 			// Grabs user input from form
 			if ($("#dateInput").val() == "") {
-				var date = new Date().toLocaleDateString();
+				var date = moment().format("MM/DD");
 			} else {
 				var date = $("#dateInput").val().trim();
 			}
