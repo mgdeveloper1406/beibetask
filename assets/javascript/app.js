@@ -19,17 +19,17 @@ $(document).ready(function() {
 	var database = firebase.database();
 
 	// display placeholder times
-	$("#timeText").text(moment().format("HHmm"));
+	$("#timeText").text(moment().format("HH:mm"));
 	$("#dateInput").attr("placeholder", moment().format("MM/DD"));
-	$("#timeInput").attr("placeholder", moment().format("HHmm"));
+	$("#timeInput").attr("placeholder", moment().format("HH:mm"));
 
 
 	// On-click of submit button function, takes values and sends to FireBase
 	$("#submitButton").on("click", function(event) {
 		event.preventDefault();
 		
-		if ($("#amountInput").val() || $("#lengthInput").val()) {
-			var timeAuto = moment().subtract($("#lengthInput").val().trim(), "m").format("HHmm");
+		if ($("#lengthInput").val()) {
+			var timeAuto = moment().subtract($("#lengthInput").val().trim(), "m").format("HH:mm");
 
 			// Grabs user input from form
 			if ($("#dateInput").val() == "") {
@@ -66,7 +66,7 @@ $(document).ready(function() {
 			$("#lengthInput").val("");
 		}
 		else {
-			alert("Enter amount and length");
+			alert("Enter length");
 		}
 	})
 
@@ -98,7 +98,7 @@ $(document).ready(function() {
 	})
 
 		$("#lengthInput").change(function() {
-			$("#timeInput").attr("placeholder", moment().subtract($("#lengthInput").val().trim(), "m").format("HHmm"));
+			$("#timeInput").attr("placeholder", moment().subtract($("#lengthInput").val().trim(), "m").format("HH:mm"));
 			$("#lengthInput").val()
 		});
 	})
