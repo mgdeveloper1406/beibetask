@@ -3,3 +3,9 @@ Andrew Ton
 Assignment 7 - Train Scheduler
 style.css  
 */
+
+#submitButton {
+    position:absolute;
+    left:0;
+    right:0;
+}
