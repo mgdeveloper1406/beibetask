@@ -4,8 +4,20 @@ Assignment 7 - Train Scheduler
 style.css  
 */
 
-#submitButton {
-    position:absolute;
-    left:0;
-    right:0;
+
+
+body {
+    background-image: url("../images/bg1.jpg");
 }
+
+.bg-babyblue {
+    background-color: #58c9eb;
+}
+
+#mainContent {
+    background-color: #023e53a1;
+}
+
+#cardId {
+    background-color: rgba(52, 58, 64, 0.5);
+}   

@@ -19,27 +19,27 @@ index.html
     <title>Route Schedules</title>
   </head>
 
-  <body class="text-center bg-dark text-dark container-fluid">
+  <body class="text-center text-dark container-fluid">
     
+    <div id="mainContent" class="pt-1">
      <!-- Jumbotron -->
-     <div class="jumbotron-fluid bg-secondary rounded">
+     <div id="" class="jumbotron-fluid bg-babyblue rounded ml-2 mr-2">
 			 <div id="title">
-        <h1> Hollis' Feeding Tracker</h1>
+          <img src="assets/images/title1.png" alt="hollis" class="pt-10 ">
 			 </div>
 			<hr class="my-4">
-			<p>Keep track of Hollis' meals.</p>
+			<p>Meal Time Tracker</p>
 			<h1 id="timeText" class="display-4">Time:</h1>
 
     </div>
-    <br>
 
     <!-- Current schedule table -->
-    <div class="card">
-      <h5 class="card-header bg-secondary rounded text-left text-dark font-weight-bold">
+    <div id="cardId" class="card ml-2 mr-2 ">
+      <h5 class="card-header bg-babyblue rounded text-left text-dark font-weight-bold">
         Previous Meals
       </h5>
-      <div class="card-body border border-secondary table-responsive pl-0 pr-0 pb-0">
-        <table class="table-sm table-striped table-secondary text-dark table-bordered w-100">
+      <div class="card-body table-responsive pl-0 pr-0 pb-10">
+        <table class="table-sm table-striped bg-babyblue text-dark table-bordered w-100">
           <thead class="font-weight-bold">
             <tr>
               <th scope="col">Date</th>
@@ -86,15 +86,17 @@ index.html
             </tr>
           </tbody>
         </table>
-          <button type="submit" id="submitButton" class="btn btn-success border border-secondary w-100">Add</button>
+
       </div>
+      <button type="submit" id="submitButton" class="btn bg-babyblue border border-secondary w-100">Add</button>
+
     </div>
     <br>
 
 
       </div>
     </div>
-
+  </div>
     <!-- Optional JavaScript -->
     <!-- FireBase first, then jQuery, then Popper.js, then Bootstrap JS, then moment.js -->
     <script src="https://www.gstatic.com/firebasejs/5.4.0/firebase.js"></script>
