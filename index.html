@@ -24,12 +24,10 @@ index.html
      <!-- Jumbotron -->
      <div class="jumbotron-fluid bg-secondary rounded">
 			 <div id="title">
-					<img src="assets/images/logo1.png" alt="Scorpion Shipyard" class="m-3" width="80%">
-					<img src="assets/images/logo2.png" alt="Departure Schedule" width="60%">
+        <h1> Hollis' Feeding Tracker</h1>
 			 </div>
 			<hr class="my-4">
-			<p>Simple Route schedule application.</p>
-			<p>Input docking information to see next available departure.</p>
+			<p>Keep track of Hollis' meals.</p>
 			<h1 id="timeText" class="display-4">Time:</h1>
 
     </div>
@@ -38,60 +36,89 @@ index.html
     <!-- Current Route schedule table -->
     <div class="card">
       <h5 class="card-header bg-secondary rounded text-left text-dark font-weight-bold">
-        Current Route Schedules
+        Previous Meals
       </h5>
       <div class="card-body border border-secondary">
-        <table class="table table-hover table-secondary text-dark table-bordered">
+        <table class="table-sm table-hover table-secondary text-dark table-bordered">
           <thead class="font-weight-bold">
             <tr>
-              <th scope="col">Route Name:</th>
-              <th scope="col">Destination:</th>
-              <th scope="col">Frequency (min)</th>
-              <th scope="col">Next Arrival</th>
-              <th scope="col">Minutes Away</th>
+              <th scope="col">Date</th>
+              <th scope="col">Start Time (Military):</th>
+              <th scope="col">Type:</th>
+              <th scope="col">Amount (oz)</th>
+              <th scope="col">Length (min)</th>
             </tr>
           </thead>
-          <tbody id="routeText">
-            <!-- <tr> // test row
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-            </tr> -->
+          <tbody id="feedText">
+          </tbody>
+          <tbody>
+            <tr> 
+              <th>
+                  <div class="form-group">
+                    <input type="text" class="form-control text-right" id="dateInput" placeholder="">
+                  </div>
+              </th>
+              <td>
+                <div class="form-group">
+                  <input type="number" class="form-control text-right" id="timeInput" placeholder="" min="0" max="2359" maxlength="4">
+                </div>
+              </td>
+              <td>
+                  <div class="form-group">
+                    <select id="typeInput" clss="form-control text-right">
+                      <option class="text-right"> </option>
+                      <option class="text-right">Bottle</option>
+                      <option class="text-right">L. Br.</option>
+                      <option class="text-right">R. Br.</option>
+                    </select>
+                  </div>
+              </td>
+              <td>
+                  <div class="form-group">
+                    <input type="number" class="form-control text-right" id="amountInput" placeholder="0" step=".5" min="0" start="1.5">
+                  </div>
+              </td>
+              <td>
+                  <div class="form-group">
+                    <input type="number" class="form-control text-right" id="lengthInput" placeholder="0" min="0" step="5" start="30">
+                  </div>
+              </td>
+            </tr>
           </tbody>
         </table>
+        <button type="submit" id="submitButton" class="btn btn-success border border-secondary w-100">Add</button>
       </div>
     </div>
     <br>
 
     <!-- Add Route form -->
-        <div class="card">
+        <!-- <div class="card">
           <h5 class="card-header bg-secondary rounded text-left text-dark font-weight-bold">
             Add Route
           </h5>
           <div class="card-body border border-secondary">
 
-            <form id="addForm" class="text-left"> <!-- Start Form -->
+            <form id="addForm" class="text-left"> 
                 <div class="form-group">
-                  <label for="nameInput">Route Name</label>
-                  <input type="text" class="form-control" id="nameInput" placeholder="Galactica">
+                  <label for="dateInput">Date</label>
+                  <input type="text" class="form-control" id="dateInput" placeholder="Galactica">
                 </div>
               <div class="form-group">
-                <label for="destinationInput">Destination</label>
-                <input type="text" class="form-control" id="destinationInput" placeholder="Caprica">
+                <label for="timeInput">Time</label>
+                <input type="text" class="form-control" id="timeInput" placeholder="Caprica">
               </div>
               <div class="form-group">
-                <label for="timeInput">Start Time</label>
+                <label for="timeInput">Amount (oz)</label>
                 <input type="number" class="form-control" id="timeInput" placeholder="HHmm">
               </div>
               <div class="form-group">
-                  <label for="frequencyInput">Frequency (min)</label>
+                  <label for="frequencyInput">Length (min)</label>
                   <input type="number" class="form-control" id="frequencyInput" placeholder="10">
                 </div>
               <button type="submit" id="submitButton" class="btn btn-secondary border border-secondary">Submit</button>
-            </form> <!-- End Form-->
+            </form> 
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
 
