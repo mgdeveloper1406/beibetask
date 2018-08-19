@@ -75,8 +75,6 @@ $(document).ready(function() {
 	// Grabs values from FireBase, 
 	database.ref().on("child_added", function(childSnapshot) {
 
-		// Get current time and append
-
 		// console.log(childSnapshot.val()); //test
 		
 		// Save FireBase routes to variables
@@ -86,19 +84,7 @@ $(document).ready(function() {
 		var amount = childSnapshot.val().amount;
 		var length = childSnapshot.val().length;
 
-
 		console.log(date, time, type, amount, length); //test
-
-		// // Add frequency to time until it is equal or greater than current time
-		// var timeNow = moment();
-		// startTime = moment(startTime, "HHmm");
-
-		// // if start time is negative, add frequency to start time until non-negative
-		// if (timeNow.diff(startTime, "m") > 0) {
-		// 	while (timeNow.diff(startTime, "m") > 0) {
-		// 		startTime.add(frequency, "m");
-		// 	}
-		// }
 
 		// Append routes to table
 		var newRoute = $("<tr>").append(
