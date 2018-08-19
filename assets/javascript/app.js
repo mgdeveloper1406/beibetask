@@ -70,7 +70,6 @@ $(document).ready(function() {
 		}
 	})
 
-
 	// Function runs when child is added and once for all existing children
 	// Grabs values from FireBase, 
 	database.ref().on("child_added", function(childSnapshot) {
