@@ -20,8 +20,8 @@ $(document).ready(function() {
 
 	// display placeholder times
 	$("#timeText").text(moment().format("HH:mm"));
-	$("#dateInput").attr("placeholder", moment().format("MM/DD "));
-	$("#timeInput").attr("placeholder", moment().format("HHmm "));
+	$("#dateInput").attr("placeholder", moment().format("MM/DD"));
+	$("#timeInput").attr("placeholder", moment().format("HHmm"));
 
 
 	// On-click of submit button function, takes values and sends to FireBase
