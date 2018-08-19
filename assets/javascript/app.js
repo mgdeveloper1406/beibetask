@@ -20,8 +20,8 @@ $(document).ready(function() {
 
 	// display placeholder times
 	$("#timeText").text(moment().format("HH:mm"));
-	$("#dateInput").attr("placeholder", moment().format("MM/DD"));
-	// $("#timeInput").attr("placeholder", moment().format("HHmm"));
+	$("#dateInput").attr("placeholder", moment().format("YYYY//MM/DD"));
+	$("#timeInput").attr("placeholder", moment().format("hh:mm a"));
 
 
 	// On-click of submit button function, takes values and sends to FireBase
@@ -30,12 +30,12 @@ $(document).ready(function() {
 		
 		if ($("#lengthInput").val()) {
 			var timeAuto = moment().subtract($("#lengthInput").val().trim(), "m").format("HH:mm");
-
+			console.log($("#dateInput").val());
 			// Grabs user input from form
 			if ($("#dateInput").val() == "") {
 				var date = moment().format("MM/DD");
 			} else {
-				var date = $("#dateInput").val().trim();
+				var date = moment($("#dateInput").val(), "YYYY-MM-DD").format("MM/DD");
 			}
 			if ($("#timeInput").val() == "") {
 				var time = timeAuto;
