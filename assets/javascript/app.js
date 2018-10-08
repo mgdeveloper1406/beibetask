@@ -98,7 +98,7 @@ $(document).ready(function() {
 			$("<td>").text(amount),
 			$("<td>").text(length)
 		)
-		$("#feedText").append(newRoute); // Append new div
+		$("#feedText").prepend(newRoute); // Append new div
 	})
 
 		$("#lengthInput").change(function() {
