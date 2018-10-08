@@ -6,66 +6,69 @@ index.html
 
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap, reset, style, Google Fonts, Hover CSS -->
-    <link rel="stylesheet" href="assets/css/reset.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-      <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Chewy|Gloria+Hallelujah" rel="stylesheet">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Bootstrap, reset, style, Google Fonts, Hover CSS -->
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Chewy|Gloria+Hallelujah" rel="stylesheet">
 
-    <title>Hollis' First App</title>
-    <link rel="icon" href="assets/images/apple-touch-icon.png">
-    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <title>Hollis' First App</title>
+  <link rel="icon" href="assets/images/apple-touch-icon.png">
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
 
 
-  </head>
+</head>
 
-  <body class="text-center text-dark container-fluid">
-    
-    <div id="mainContent" class="pt-1 pb-2 rounded">
-     <!-- Jumbotron -->
-     <div id="" class="jumbotron-fluid bg-babyblue rounded ml-2 mr-2 pb-2">
-			 <div id="title" class="pt-3 pl-3 pr-3">
-          <img src="assets/images/title3.png" alt="hollis" class="w-100">
-			 </div>
-			<!-- <hr class=""> -->
+<body class="text-center text-dark container-fluid">
+
+  <div id="mainContent" class="pt-1 pb-2 rounded">
+    <!-- Jumbotron -->
+    <div id="" class="jumbotron-fluid bg-babyblue rounded ml-2 mr-2 pb-2">
+      <div id="title" class="pt-3 pl-3 pr-3">
+        <img src="assets/images/title3.png" alt="hollis" class="w-100">
+      </div>
+      <!-- <hr class=""> -->
       <p>Daily Tracker</p>
-			<h1 id="timeText" class="display-4">Time:</h1>
-			<!-- <hr class=""> -->
+      <h1 id="timeText" class="display-4">Time:</h1>
+      <!-- <hr class=""> -->
 
 
-    <!-- Current schedule table -->
-    <div id="cardId" class="card ml-2 mr-2 bg-muted rounded">
-      <div class="card-body table-responsive pl-0 pr-0 pb-1 pt-0 bg-muted">
-        <table class="table-sm table-striped table-muted text-light table-bordered w-100">
-          <thead class="font-weight-bold">
-            <tr>
-              <th scope="col">Date</th>
-              <th scope="col">Start Time</th>
-              <th scope="col">Type</th>
-              <th scope="col">Amount (oz)</th>
-              <th scope="col">Length (min)</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr> 
-              <th>
+      <!-- Current schedule table -->
+      <div id="" class="card ml-2 mr-2 bg-muted rounded cardId">
+        <div class="card-body table-responsive pl-0 pr-0 pb-1 pt-0 bg-muted">
+          <table class="table-sm table-striped table-muted text-light table-bordered w-100">
+            <thead class="font-weight-bold">
+              <tr>
+                <th scope="col">Date</th>
+                <th scope="col">Start Time</th>
+                <th scope="col">Type</th>
+                <th scope="col">Amount (oz)</th>
+                <th scope="col">Length (min)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>
                   <div class="form-group">
                     <input type="text" class="form-control text-center" id="dateInput" placeholder="">
                   </div>
-              </th>
-              <td>
-                <div class="form-group">
-                  <input type="number" class="form-control text-center"id="timeInput" min="0" max="2359" maxlength="4" step="30" placeholder="">
-                </div>
-              </td>
-              <td>
+                </th>
+                <td>
+                  <div class="form-group">
+                    <input type="number" class="form-control text-center" id="timeInput" min="0" max="2359" maxlength="4"
+                      step="30" placeholder="">
+                  </div>
+                </td>
+                <td>
                   <div class="form-group">
                     <select id="typeInput" clss="form-control text-center">
                       <option class="text-center">Bottle</option>
@@ -73,40 +76,73 @@ index.html
                       <option class="text-center">R. Br.</option>
                     </select>
                   </div>
-              </td>
-              <td>
+                </td>
+                <td>
                   <div class="form-group">
-                    <input type="number" class="form-control text-center" id="amountInput" placeholder="0" step=".5" min="0" start="1.5">
+                    <input type="number" class="form-control text-center" id="amountInput" placeholder="0" step=".5"
+                      min="0" start="1.5">
                   </div>
-              </td>
-              <td>
+                </td>
+                <td>
                   <div class="form-group">
-                    <input type="number" class="form-control text-center" id="lengthInput" placeholder="0" min="0" step="5" start="30">
-                  </div>
-              </td>
-            </tr>
-          </tbody>
-          <tbody id="feedText">
-          </tbody>
-        </table>
+                    <input type="number" class="form-control text-center" id="lengthInput" placeholder="0" min="0" step="5"
+                      start="30">
 
+                  </div>
+
+                </td>
+
+              </tr>
+              <!-- <button type="submit" id="submitButton" class="btn btn-light bg-babyblue border border-secondary w-100 mb-1">Add</button> -->
+
+            </tbody>
+
+          </table>
+
+          <button type="submit" id="submitButton" class="btn btn-light bg-babyblue border border-secondary w-100 mb-1">Add</button>
+        </div>
       </div>
-      <button type="submit" id="submitButton" class="btn btn-light bg-babyblue border border-secondary w-100 mb-1">Add</button>
+    </div>
+    <br>
+    <div id="" class="jumbotron-fluid bg-babyblue rounded ml-2 mr-2 pb-2">
+
+      <div id="" class="card ml-2 mr-2 bg-muted rounded cardId">
+
+        <div class="card-body table-responsive pl-0 pr-0 pb-1 pt-0 bg-muted">
+          <table class="table-sm table-striped table-muted text-light table-bordered w-100">
+            <thead class="font-weight-bold">
+              <tr>
+                <th scope="col">Date</th>
+                <th scope="col">Start Time</th>
+                <th scope="col">Type</th>
+                <th scope="col">Amount (oz)</th>
+                <th scope="col">Length (min)</th>
+              </tr>
+            </thead>
+            <tbody id="feedText">
+            </tbody>
+          </table>
+
+        </div>
+      </div>
+
     </div>
 
-
-      </div>
-    </div>
   </div>
-</div>
+  </div>
+  </div>
+  </div>
 
-    <!-- Optional JavaScript -->
-    <!-- FireBase first, then jQuery, then Popper.js, then Bootstrap JS, then moment.js -->
-    <script src="https://www.gstatic.com/firebasejs/5.4.0/firebase.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
-    <script src="assets/javascript/app.js"></script>
-    </body>
+  <!-- Optional JavaScript -->
+  <!-- FireBase first, then jQuery, then Popper.js, then Bootstrap JS, then moment.js -->
+  <script src="https://www.gstatic.com/firebasejs/5.4.0/firebase.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+  <script src="assets/javascript/app.js"></script>
+</body>
+
 </html>

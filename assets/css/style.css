@@ -18,6 +18,6 @@ body {
     background-color: #023e53a1;
 }
 
-#cardId {
+.cardId {
     background-color: rgba(52, 58, 64, 0.5);
 }   
